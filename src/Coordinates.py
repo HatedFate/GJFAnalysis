@@ -6,7 +6,7 @@ parser.add_argument("-o", "--output", type=str, required=True)
 args = parser.parse_args()
 
 
-def main(path, output):
+def analyze(path, output):
     with open(path, "r") as file:
         lines = file.readlines()
 
@@ -31,4 +31,4 @@ def main(path, output):
 
 
 if __name__ == '__main__':
-    main(args.path, args.output)
+    analyze(args.path, args.output)
